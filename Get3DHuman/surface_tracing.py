@@ -341,6 +341,10 @@ def make_rotate(rx, ry, rz):
 
 
 def make_rotate_torch(rx, ry, rz):
+    rx = torch.tensor(rx).float()
+    ry = torch.tensor(ry).float()
+    rz = torch.tensor(rz).float()
+
     sinX = torch.sin(rx)
     sinY = torch.sin(ry)
     sinZ = torch.sin(rz)
